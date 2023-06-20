@@ -1,0 +1,39 @@
+/* 管理员页面样式 */
+.admin-container {
+  margin-top: 20px;
+}
+
+.admin-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.admin-form {
+  margin-bottom: 20px;
+}
+
+.admin-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.admin-form input[type="text"],
+.admin-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-form button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-form button:hover {
+  background-color: #1e7e34;
+}

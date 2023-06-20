@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑已有产品</title>
+
+    <form method="POST" action="{{ url_for('edit_product',product_id = product.id) }}">
+        <li><input type="text" name="name" value="{{ product.name }}" required></li>
+            <li><input type="number" name="price" value="{{ product.price }}" required></li>
+            <li><textarea name="short_description" value="{{ product.short_description }}" required>{{ product.short_description }}</textarea></li>
+            <li><textarea name="long_description" value="{{ product.long_description }}" required>{{ product.long_description }}</textarea></li>
+            <li><button type="submit">更新</button></li>
+        </form>
+
+
+
+    </form>
+</head>
+<body>
+
+</body>
+</html>

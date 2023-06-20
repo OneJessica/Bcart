@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <ul>
+    {% if orders %}
+        {% for order in orders %}
+        <div>
+            <h3>{{ order.product }}</h3>
+            <p>Quantity: {{ order.quantity }}</p>
+            <p>Total Price: ${{ order.total_price }}</p>
+            <a href="{{ url_for('remove_from_cart',order_id = order.product.id) }}">移出购物车</a>
+        </div>
+    {% endfor %}
+    {% endif %}
+    </ul>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+{#    <a href="{{ url_for('checkout') }}">Checkout</a>#}
+</body>
+</html>

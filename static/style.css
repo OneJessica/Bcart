@@ -1,0 +1,76 @@
+/* 全局样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 导航栏样式 */
+.navbar {
+  background-color: #f8f8f8;
+  height: 60px;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+/* 按钮样式 */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* 商品卡片样式 */
+.product-card {
+  width: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+}
+
+.product-card h3 {
+  margin-top: 10px;
+}
+
+.product-card p {
+  color: #888;
+}
+
+.avatar {
+      width: 100px; /* 设置宽度 */
+      height: 100px; /* 设置高度 */
+      border-radius: 50%; /* 圆角边框，使图片显示为圆形 */
+    }

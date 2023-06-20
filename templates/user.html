@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<h1>User</h1>
+<img class = "avatar" src="{{ url_for('static', filename='snake.png') }}" alt="用户头像">
+<h1>{{ current_user.username }}</h1>
+<a href="{{  url_for('orders')}}">订单中心</a>
+<a href="{{  url_for('cart')}}">购物车</a>
+<a href="{{  url_for('logout')}}">退出登陆</a>
+    {% if current_user.is_superuser %}
+        <a href="{{ url_for('admin') }}">商品管理</a>
+
+    {% endif %}
+</body>
+
+</html>

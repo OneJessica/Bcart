@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='admin.css') }}">
+</head>
+<body>
+    <h1>Welcome, Admin!</h1>
+{#    {% if current_user.is_superuser %}#}
+
+    <a href="{{ url_for("create_product") }}" >发布新产品</a>
+    <h1>编辑已有产品</h1>>
+    {% for product in products %}
+    <a href="{{ url_for("edit_product",product_id=product.id) }}" >{{product.name}}</a>
+    {% endfor %}
+
+{#        <h3>Order Statistics</h3>#}
+{#        <p>Total Orders: {{ orders_count }}</p>#}
+{#        <p>Total Sales: ${{ total_sales }}</p>#}
+{#    {% else %}#}
+{#        <p>Access denied!</p>#}
+{#    {% endif %}#}
+
+{#    <h2>Order Statistics</h2>#}
+{#    <table>#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Order ID</th>#}
+{#                <th>Customer Name</th>#}
+{#                <th>Product Name</th>#}
+{#                <th>Quantity</th>#}
+{#                <th>Total Price</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#            {% for order in orders %}#}
+{#            <tr>#}
+{#                <td>{{ order.order_id }}</td>#}
+{#                <td>{{ order.customer_name }}</td>#}
+{#                <td>{{ order.product_name }}</td>#}
+{#                <td>{{ order.quantity }}</td>#}
+{#                <td>{{ order.total_price }}</td>#}
+{#            </tr>#}
+{#            {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+</body>
+</html>

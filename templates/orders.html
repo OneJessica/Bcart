@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Orders</title>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>My Orders</h1>
+    <ul>
+        {% for order in orders %}
+        <div>
+            <h3>{{ order.product.name }}</h3>
+            <p>Quantity: {{ order.quantity }}</p>
+            <p>Total Price: ${{ order.total_price }}</p>
+        </div>
+    {% endfor %}
+    </ul>
+</body>
+</html>

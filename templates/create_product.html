@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布新产品</title>
+</head>
+<body>
+<form method="POST" action="{{ url_for('admin') }}">
+            <li><input type="text" name="name" placeholder="Product Name" required></li>
+            <li><input type="number" name="price" placeholder="price" required></li>
+            <li><textarea name="short_description" placeholder="Product Info" required></textarea></li>
+            <li><textarea name="long_description" placeholder="Product Description" required></textarea></li>
+            <li><button type="submit">Add Product</button></li>
+        </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
